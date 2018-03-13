@@ -1,0 +1,15 @@
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+.tank {
+  position: absolute;
+  height: 200px;
+  width: 100px;
+  margin-left: 45vw;
+  margin-top: 50vh;
+  background-image: url('car.png');
+  background-size: contain;
+  transform: rotate(0deg);
+}
