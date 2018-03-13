@@ -2,10 +2,6 @@
 
 const factory = (location, direction, speed, marker) => {
   const car = {
-    speed: speed,
-    direction: direction,
-    location: location,
-    marker: marker,
     move: function () {
       if (direction === 'north') {
         location[0] = location[0] - speed
