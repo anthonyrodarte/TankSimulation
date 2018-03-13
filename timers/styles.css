@@ -11,5 +11,5 @@ body {
   margin-top: 50vh;
   background-image: url('car.png');
   background-size: contain;
-  transform: rotate(0deg);
+  transform: rotateZ(0deg);
 }

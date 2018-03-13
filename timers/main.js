@@ -36,36 +36,44 @@ const factory = (location, direction, speed, marker) => {
     turnRight: function () {
       if (direction === 'north') {
         direction = 'east'
+        marker.style.transform = 'rotateZ(90deg)'
       }
       else if (direction === 'east') {
         direction = 'south'
+        marker.style.transform = 'rotateZ(180deg)'
       }
       else if (direction === 'south') {
         direction = 'west'
+        marker.style.transform = 'rotateZ(270deg)'
       }
       else if (direction === 'west') {
         direction = 'north'
+        marker.style.transform = 'rotateZ(0deg)'
       }
     },
     turnLeft: function () {
       if (direction === 'north') {
         direction = 'west'
+        marker.style.transform = 'rotateZ(-90deg)'
       }
       else if (direction === 'west') {
         direction = 'south'
+        marker.style.transform = 'rotateZ(-180deg)'
       }
       else if (direction === 'south') {
         direction = 'east'
+        marker.style.transform = 'rotateZ(-270deg)'
       }
       else if (direction === 'east') {
         direction = 'north'
+        marker.style.transform = 'rotateZ(0deg)'
       }
     }
   }
   return car
 }
 
-const myCar = factory([0, 0], 'north', 10, document.querySelector('div.tank'))
+const myCar = factory([0, 690], 'north', 1, document.querySelector('div.tank'))
 setInterval(function () {
   myCar.move()
-}, 1000)
+}, 100)
